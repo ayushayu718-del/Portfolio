@@ -4,25 +4,20 @@
 <meta charset="UTF-8">
 <title>Ayush Portfolio</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <style>
 * {
     box-sizing: border-box;
     font-family: Arial, sans-serif;
 }
-
 body {
     margin: 0;
     background: #5e8ff3;
 }
-
-/* HEADER */
 header {
     background: #0d1b2a;
     color: white;
     padding: 40px 20px;
 }
-
 .profile {
     max-width: 900px;
     margin: auto;
@@ -30,46 +25,35 @@ header {
     align-items: center;
     gap: 20px;
 }
-
 .profile img {
     width: 120px;
     height: 120px;
     border-radius: 50%;
     border: 3px solid #00ffcc;
 }
-
 .profile p {
     color: #00ffcc;
 }
-
-/* MAIN CONTAINER */
 .container {
     max-width: 1100px;
     margin: auto;
     padding: 20px;
 }
-
-/* GRID LAYOUT */
 .grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 20px;
 }
-
-/* CARD SECTION */
 .section {
     background: white;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 5px 10px rgba(0,0,0,0.1);
 }
-
 .section h2 {
     border-left: 5px solid #0d1b2a;
     padding-left: 10px;
 }
-
-/* SKILLS */
 .skills span {
     background: #0d1b2a;
     color: white;
@@ -78,8 +62,6 @@ header {
     display: inline-block;
     border-radius: 20px;
 }
-
-/* FOOTER */
 footer {
     background: #0d1b2a;
     color: white;
@@ -87,8 +69,6 @@ footer {
     padding: 15px;
     margin-top: 20px;
 }
-
-/* MOBILE */
 @media(max-width:600px) {
     .profile {
         flex-direction: column;
@@ -97,9 +77,7 @@ footer {
 }
 </style>
 </head>
-
 <body>
-
 <header>
     <div class="profile">
         <img src="https://uploads.onecompiler.io/43faapvtu/44brtc9rw/1000142987.png" alt="Profile Photo">
@@ -109,10 +87,8 @@ footer {
         </div>
     </div>
 </header>
-
 <div class="container">
     <div class="grid">
-
         <div class="section">
             <h2>About Me</h2>
             <p>
@@ -120,14 +96,12 @@ footer {
                 I have a strong interest in Web Development and Python programming.
             </p>
         </div>
-
         <div class="section">
             <h2>Education</h2>
             <p><b>Bachelor of Computer Science</b></p>
             <p>Government First Grade College, Thirthahalli</p>
             <p>2023 – 2026</p>
         </div>
-
         <div class="section">
             <h2>Skills</h2>
             <div class="skills">
@@ -137,26 +111,21 @@ footer {
                 <span>Python</span>
             </div>
         </div>
-
         <div class="section">
             <h2>Programming Languages</h2>
             <p>✔ C</p>
             <p>✔ Python</p>
             <p>✔ R Programming</p>
         </div>
-
         <div class="section">
             <h2>Contact</h2>
             <p>Email: ayushayu718@gmail.com</p>
             <p>GitHub: github.com/ayushayu718-del</p>
         </div>
-
     </div>
 </div>
-
 <footer>
     © 2026 Ayush Portfolio
 </footer>
-
 </body>
 </html>
