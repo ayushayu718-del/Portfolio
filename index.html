@@ -8,120 +8,123 @@
 * {
     box-sizing: border-box;
     font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
 }
 body {
-    margin: 0;
-    background: #5e8ff3;
+    background: #f0f4f8;
+    color: #333;
 }
 header {
-    background: #0d1b2a;
-    color: white;
-    padding: 40px 20px;
+    background: #1b263b;
+    color: #fff;
+    padding: 50px 20px;
+    text-align: center;
 }
-.profile {
-    max-width: 900px;
-    margin: auto;
-    display: flex;
-    align-items: center;
-    gap: 20px;
-}
-.profile img {
-    width: 120px;
-    height: 120px;
+header img {
+    width: 140px;
+    height: 140px;
     border-radius: 50%;
-    border: 3px solid #00ffcc;
+    border: 3px solid #00ffc3;
+    margin-bottom: 15px;
 }
-.profile p {
-    color: #00ffcc;
+header h1 {
+    font-size: 2.5em;
+}
+header p {
+    font-size: 1.2em;
+    color: #00ffc3;
+    margin-top: 5px;
 }
 .container {
-    max-width: 1100px;
-    margin: auto;
-    padding: 20px;
-}
-.grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 20px;
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 0 20px;
 }
 .section {
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+    background: #fff;
+    padding: 25px 20px;
+    margin-bottom: 25px;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
 }
 .section h2 {
-    border-left: 5px solid #0d1b2a;
-    padding-left: 10px;
+    margin-bottom: 15px;
+    color: #1b263b;
+    border-bottom: 3px solid #00ffc3;
+    padding-bottom: 5px;
 }
 .skills span {
-    background: #0d1b2a;
-    color: white;
-    padding: 8px 15px;
-    margin: 5px;
+    background: #1b263b;
+    color: #fff;
+    padding: 8px 18px;
+    margin: 5px 5px 0 0;
     display: inline-block;
-    border-radius: 20px;
+    border-radius: 25px;
+    font-size: 0.95em;
+}
+.contact a {
+    color: #1b263b;
+    text-decoration: none;
+    font-weight: bold;
+}
+.contact a:hover {
+    color: #00ffc3;
 }
 footer {
-    background: #0d1b2a;
-    color: white;
+    background: #1b263b;
+    color: #fff;
     text-align: center;
-    padding: 15px;
+    padding: 20px;
     margin-top: 20px;
 }
 @media(max-width:600px) {
-    .profile {
-        flex-direction: column;
-        text-align: center;
+    header h1 {
+        font-size: 2em;
+    }
+    header p {
+        font-size: 1em;
     }
 }
 </style>
 </head>
 <body>
 <header>
-    <div class="profile">
-        <img src="https://uploads.onecompiler.io/43faapvtu/44brtc9rw/1000142987.png" alt="Profile Photo">
-        <div>
-            <h1>Ayush</h1>
-            <p>Computer Science Student</p>
-        </div>
-    </div>
+    <img src="https://uploads.onecompiler.io/43faapvtu/44brtc9rw/1000142987.png" alt="Ayush Photo">
+    <h1>Ayush</h1>
+    <p>Computer Science Student & Web Developer</p>
 </header>
 <div class="container">
-    <div class="grid">
-        <div class="section">
-            <h2>About Me</h2>
-            <p>
-                I am a Computer Science student nearing completion of my degree.
-                I have a strong interest in Web Development and Python programming.
-            </p>
+    <div class="section">
+        <h2>About Me</h2>
+        <p>Hello! I am Ayush, a passionate Computer Science student with a keen interest in Web Development and Python programming. I enjoy creating clean and functional websites, learning new technologies, and improving my coding skills.</p>
+    </div>
+    <div class="section">
+        <h2>Education</h2>
+        <ul>
+            <li><b>Bachelor of Computer Science</b> – Government First Grade College, Thirthahalli (2023–2026)</li>
+        </ul>
+    </div>
+    <div class="section">
+        <h2>Skills</h2>
+        <div class="skills">
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>JavaScript</span>
         </div>
-        <div class="section">
-            <h2>Education</h2>
-            <p><b>Bachelor of Computer Science</b></p>
-            <p>Government First Grade College, Thirthahalli</p>
-            <p>2023 – 2026</p>
-        </div>
-        <div class="section">
-            <h2>Skills</h2>
-            <div class="skills">
-                <span>HTML</span>
-                <span>CSS</span>
-                <span>JavaScript</span>
-                <span>Python</span>
-            </div>
-        </div>
-        <div class="section">
-            <h2>Programming Languages</h2>
-            <p>✔ C</p>
-            <p>✔ Python</p>
-            <p>✔ R Programming</p>
-        </div>
-        <div class="section">
-            <h2>Contact</h2>
-            <p>Email: ayushayu718@gmail.com</p>
-            <p>GitHub: github.com/ayushayu718-del</p>
-        </div>
+    </div>
+    <div class="section">
+        <h2>Programming Languages</h2>
+        <ul>
+            <li> c </li>
+            <li> Python </li>
+            <li>R Programming</li>
+        </ul>
+    </div>
+    <div class="section contact">
+        <h2>Contact</h2>
+        <p>Email: <a href="mailto:ayushayu718@gmail.com">ayushayu718@gmail.com</a></p>
+        <p>GitHub: <a href="https://github.com/ayushayu718-del" target="_blank">github.com/ayushayu718-del</a></p>
     </div>
 </div>
 <footer>
