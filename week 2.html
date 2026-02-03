@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Editable Image Gallery</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+:root {
+    --img-height: 180px;       
+    --border-radius: 12px;    
+    --hover-scale: 1.08;        
+    --hover-lift: -8px;        
+    --grid-gap: 18px;            
+    --bg-color: #0f172a;         
+}
+body {
+    margin: 0;
+    background: var(--bg-color);
+    font-family: Arial, sans-serif;
+    color: white;
+}
+h2 {
+    text-align: center;
+    padding: 15px;
+}
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--grid-gap);
+    padding: 20px;
+}
+.gallery img {
+    width: 100%;
+    height: var(--img-height);
+    object-fit: cover;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: 0.4s ease;
+}
+.gallery img:hover {
+    transform: scale(var(--hover-scale)) translateY(var(--hover-lift));
+    box-shadow: 0px 12px 25px rgba(0,0,0,0.6);
+    filter: brightness(1.15);
+}
+.lightbox {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.9);
+    justify-content: center;
+    align-items: center;
+}
+.lightbox img {
+    max-width: 90%;
+    max-height: 85%;
+    border-radius: 12px;
+}
+.close {
+    position: absolute;
+    top: 15px;
+    right: 25px;
+    font-size: 35px;
+    cursor: pointer;
+}
+</style>
+</head>
+<body>
+<h2> Eight Wonders Of The World</h2>
+<div class="gallery">
+    <img src="https://uploads.onecompiler.io/43faapvtu/44ch6rsnz/1000144694.jpg">
+    <img src="https://uploads.onecompiler.io/43faapvtu/44ch6rsnz/1000144688.jpg">
+    <img src="https://uploads.onecompiler.io/43faapvtu/44ch6rsnz/1000144690.jpg">
+    <img src="https://uploads.onecompiler.io/43faapvtu/44ch6rsnz/1000144682.jpg">
+    <img src="https://uploads.onecompiler.io/43faapvtu/44ch6rsnz/1000144685.jpg">
+    <img src="https://uploads.onecompiler.io/43faapvtu/44ch6rsnz/1000144676.jpg">
+    <img src="https://uploads.onecompiler.io/43faapvtu/44ch6rsnz/1000144679.jpg">
+    <img src="https://uploads.onecompiler.io/43faapvtu/44ch6rsnz/1000144692.jpg">
+</div>
+<div class="lightbox" id="lightbox">
+    <span class="close" id="closeBtn">&times;</span>
+    <img id="lightImg">
+</div>
+<script>
+const images = document.querySelectorAll(".gallery img");
+const lightbox = document.getElementById("lightbox");
+const lightImg = document.getElementById("lightImg");
+const closeBtn = document.getElementById("closeBtn");
+images.forEach(img => {
+    img.addEventListener("click", () => {
+        lightbox.style.display = "flex";
+        lightImg.src = img.src;
+    });
+});
+closeBtn.addEventListener("click", () => {
+    lightbox.style.display = "none";
+});
+lightbox.addEventListener("click", (e) => {
+    if (e.target !== lightImg) {
+        lightbox.style.display = "none";
+    }
+});
+</script>
+</body>
+</html>
